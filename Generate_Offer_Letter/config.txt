@@ -1,0 +1,13 @@
+{
+"QueueName": "Offer_Letter",
+"MailCredentials":"UserMailCreds",
+"TemplateFileName":"Sample_Offer_Letter.docx",
+"ExcelFilePath":"InputExcel.xlsx",
+"PortNumber":"465",
+"PortServerID":"smtp.gmail.com",
+"RejectedSubject":"Interview Result for the post of ",
+"RejectedBody":"This mail is to let you know that you have not been selected for the position. Thank you for taking the time to meet our interview team. The team enjoyed meeting you and our discussions. You are kindly encourage to apply again in the future if we post a job opening for which you qualify.",
+"HiredSubject":"Offer of Appointment for the post of ",
+"HiredBody":"This mail is to let you know that you have been selected for the applied position. Kindly find the Offer Letter attachment below. We are happy to work with you in the future."
+
+}

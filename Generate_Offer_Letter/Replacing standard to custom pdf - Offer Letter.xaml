@@ -1,0 +1,184 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Replacing_standard_to_custom_pdf___Offer_Letter" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_jobTitleReplacement="RPA Developer Trainee" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_dateReplacement="21st June 2022" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_companyAddressReplacement="22, Teachers Colony, Meetper Nagar, 2nd Street, - Trivandrum Rd, near Govt. Engg. College, - Tirunelveli, Tamil Nadu 627007." this:Replacing_standard_to_custom_pdf___Offer_Letter.in_companyNameReplacement="Tiliconveli Tech Park" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_salaryPerMonthReplacement="Rs.20,000 per month" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_annualCTCReplacement="2.4 lakhs per annum" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_joiningDateReplacement="01st July 2022" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_hrMailIdReplacement="aartiak.e5@gmail.com" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_hrNameReplacement="Aarti A K" this:Replacing_standard_to_custom_pdf___Offer_Letter.in_titleReplacement="Miss." this:Replacing_standard_to_custom_pdf___Offer_Letter.in_candidateNameReplacement="Sorna Lakshmi D" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_pdfContent" Type="InArgument(x:String)" />
+    <x:Property Name="in_jobTitleReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_dateReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_companyAddressReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_companyNameReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_salaryPerMonthReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_annualCTCReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_joiningDateReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_hrMailIdReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_hrNameReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_titleReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_candidateNameReplacement" Type="InArgument(x:String)" />
+    <x:Property Name="out_customizedOfferLetter" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>878,2875</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Replacing_standard_to_custom_pdf___Offer_Letter_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Converting the standard template to the desired pdf by replacing standard fields to update dynamically for each candidate. " DisplayName="Replacing_standard_to_custom_pdf___Offer_Letter" sap:VirtualizedContainerService.HintSize="552,2810" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_replacedCompanyName" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedCompanyAddress1" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedCompanyAddress2" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedCompanyAddress3" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedDate" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedJobTitle" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedSalaryPerMonth" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedAnnualCTC" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedJoiningDate" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedHRmailid" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedHRName" />
+      <Variable x:TypeArguments="x:String" Name="str_replacedTitle" />
+      <Variable x:TypeArguments="x:String" Name="str_companyAddress1Replacement" />
+      <Variable x:TypeArguments="x:String" Name="str_companyAddress2Replacement" />
+      <Variable x:TypeArguments="x:String" Name="str_companyAddress3Replacement" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Starting to replace datas - Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started replacing required fields in pdf&quot;]" />
+    <ui:ReadPDFText DisplayName="Read PDF Text" FileName="Sample_Offer_Letter.pdf" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[in_pdfContent]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[in_pdfContent]" />
+    <ui:Replace BuilderPattern="abc" DisplayName="Replace - Company Name" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[in_pdfContent]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;abc&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="_Company name" RegexOption="IgnoreCase, Compiled" Replacement="[in_CompanyNameReplacement]" Result="[str_replacedCompanyName]" />
+    <ui:MultipleAssign DisplayName="Splitting Address into 3 steps - Multiple Assign" sap:VirtualizedContainerService.HintSize="510,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_companyAddress1Replacement]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Split(in_CompanyAddressReplacement, "-")(0)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_companyAddress2Replacement]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Split(in_CompanyAddressReplacement, "-")(1)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_companyAddress3Replacement]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Split(in_CompanyAddressReplacement, "-")(2)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[str_companyAddress1Replacement + &quot;----&quot; + str_companyAddress2Replacement + &quot;------&quot; +str_companyAddress3Replacement]" />
+    <ui:Replace DisplayName="Replace - Company Address 1" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_2" Input="[str_replacedCompanyName]" IsBuilderTabModified="False" Pattern="_Address1" RegexOption="IgnoreCase, Compiled" Replacement="[str_companyAddress1Replacement]" Result="[str_replacedCompanyAddress1]" />
+    <ui:Replace DisplayName="Replace - Company Address 2" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[str_replacedCompanyAddress1]" IsBuilderTabModified="False" Pattern="_Address2" RegexOption="IgnoreCase, Compiled" Replacement="[str_companyAddress2Replacement]" Result="[str_replacedCompanyAddress2]" />
+    <ui:Replace DisplayName="Replace - Company Address 3" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_4" Input="[str_replacedCompanyAddress2]" IsBuilderTabModified="False" Pattern="_Address3" RegexOption="IgnoreCase, Compiled" Replacement="[str_companyAddress3Replacement]" Result="[str_replacedCompanyAddress3]" />
+    <ui:Replace DisplayName="Replace - Date" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_5" Input="[str_replacedCompanyAddress3]" IsBuilderTabModified="False" Pattern="_Date" RegexOption="IgnoreCase, Compiled" Replacement="[in_DateReplacement]" Result="[str_replacedDate]" />
+    <ui:Replace DisplayName="Replace - Job Title" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_6" Input="[str_replacedDate]" IsBuilderTabModified="False" Pattern="_Job Title" RegexOption="IgnoreCase, Compiled" Replacement="[in_jobTitleReplacement]" Result="[str_replacedJobTitle]" />
+    <ui:Replace DisplayName="Replace - SalaryPerMonth" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_7" Input="[str_replacedJobTitle]" IsBuilderTabModified="False" Pattern="_Salary/month" RegexOption="IgnoreCase, Compiled" Replacement="[in_salaryPerMonthReplacement]" Result="[str_replacedSalaryPerMonth]" />
+    <ui:Replace DisplayName="Replace - AnnualCTC" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_8" Input="[str_replacedSalaryPerMonth]" IsBuilderTabModified="False" Pattern="_Annual CTC" RegexOption="IgnoreCase, Compiled" Replacement="[in_annualCTCReplacement]" Result="[str_replacedAnnualCTC]" />
+    <ui:Replace DisplayName="Replace - Joining Date" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_9" Input="[str_replacedAnnualCTC]" IsBuilderTabModified="False" Pattern="_Joining Date" RegexOption="IgnoreCase, Compiled" Replacement="[in_joiningDateReplacement]" Result="[str_replacedJoiningDate]" />
+    <ui:Replace DisplayName="Replace - HR mailID" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_10" Input="[str_replacedJoiningDate]" IsBuilderTabModified="False" Pattern="_HR Mail id" RegexOption="IgnoreCase, Compiled" Replacement="[in_hrMailIdReplacement]" Result="[str_replacedHRmailid]" />
+    <ui:Replace DisplayName="Replace - HR Name" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_11" Input="[str_replacedHRmailid]" IsBuilderTabModified="False" Pattern="_HR Name" RegexOption="IgnoreCase, Compiled" Replacement="[in_hrNameReplacement]" Result="[str_replacedHRName]" />
+    <ui:Replace DisplayName="Replace - Title" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_12" Input="[str_replacedHRName]" IsBuilderTabModified="False" Pattern="_Title" RegexOption="IgnoreCase, Compiled" Replacement="[in_titleReplacement]" Result="[str_replacedTitle]" />
+    <ui:Replace DisplayName="Replace - Candidate Name" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="Replace_13" Input="[str_replacedTitle]" IsBuilderTabModified="False" Pattern="_Name" RegexOption="IgnoreCase, Compiled" Replacement="[in_candidateNameReplacement]" Result="[out_customizedOfferLetter]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[out_customizedOfferLetter]" />
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="new.docx" sap:VirtualizedContainerService.HintSize="510,454" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,345" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="WordAppendText_1" NewLine="False" Text="[out_customizedOfferLetter]" />
+            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="output.pdf" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+    </p:WordApplicationScope>
+    <ui:LogMessage DisplayName="Ending to replace datas - Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended replacing required fields in pdf&quot;]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,11 @@
+Date
+qi_offerLetterTransItem.SpecificContent("JobTitle").ToString
+qi_offerLetterTransItem.SpecificContent("SalaryPerMonth").ToString
+qi_offerLetterTransItem.SpecificContent("AnnualCTC").ToString
+qi_offerLetterTransItem.SpecificContent("JoiningDate").ToString
+qi_offerLetterTransItem.SpecificContent("HRmailID").ToString
+Hrname
+qi_offerLetterTransItem.SpecificContent("Title").ToString
+qi_offerLetterTransItem.SpecificContent("CandidateName").ToString
+qi_offerLetterTransItem.SpecificContent("CompanyAddress").ToString
+qi_offerLetterTransItem.SpecificContent("CompanyName").ToString
